@@ -1,0 +1,42 @@
+# Author: Pharrell_WANG
+#   Date: 2017/6/28
+
+
+Instruction:
+--------------------------------------------------------------------------------
+Please get the raw data from the file system:
+
+    /Users/Pharrell_WANG/data/Data-Collected-from-HTM-all-intra
+
+Memo:
+--------------------------------------------------------------------------------
+1. path of backups for original data:
+    /Volumes/WD_2016/0-1-1--all-intra-HTM-encoding
+
+2. path of original data on the Macbook Pro:
+    /Users/Pharrell_WANG/data/Data-Collected-from-HTM-all-intra
+
+Useful Notes:
+--------------------------------------------------------------------------------
+1. concatenate the data sets according to block sizes (e.g., According to block
+sizes, concat the data from difference sequences into four groups/csv_files,
+64x64, 32x32, 16x16, 8x8)
+
+2. remove the commas at the end of each line for all the four csv_files.
+
+3. counting the total number of data samples, and use the counting results to
+divide the data into
+    1. training data set. 60%
+    2. validation data set. 20%
+    3. testing data set. 20%
+
+        1. [those ratios are recommended by Prof.Andrew Ng. You'd be surprised
+        to find out that 80/20 is quite a commonly occurring ratio, often
+        referred to as the Pareto principle. It's usually a safe bet if you
+        use that ratio. ]
+
+        2. to be fair, we will first find the class [from the 37 classes]
+        which has the least data samples, secondly based on its amount
+        of samples, we get the train-validation-test data sets for other
+        classes such that all classes have the same amount of data for
+        the deep learning process.

@@ -19,26 +19,8 @@ def comma_remover(INPUT_FILE, OUTPUT_FILE):
         print("total lines of " + INPUT_FILE + str(" :      ") + str(cnt))
 
 
-list_of_input_files = [
-                       # '/Users/Pharrell_WANG/PycharmProjects/vcmd_data_prepare/1_raw_data_32x32/z_training_data_32_balloon.csv',
-                       # '/Users/Pharrell_WANG/PycharmProjects/vcmd_data_prepare/1_raw_data_32x32/z_training_data_32_gt_fly.csv',
-                       # '/Users/Pharrell_WANG/PycharmProjects/vcmd_data_prepare/1_raw_data_32x32/z_training_data_32_kendo.csv',
-                       # '/Users/Pharrell_WANG/PycharmProjects/vcmd_data_prepare/1_raw_data_32x32/z_training_data_32_newspaper.csv',
-                       # '/Users/Pharrell_WANG/PycharmProjects/vcmd_data_prepare/1_raw_data_32x32/z_training_data_32_poznan_hall2.csv',
-                       # '/Users/Pharrell_WANG/PycharmProjects/vcmd_data_prepare/1_raw_data_32x32/z_training_data_32_poznan_street.csv',
-                       # '/Users/Pharrell_WANG/PycharmProjects/vcmd_data_prepare/1_raw_data_32x32/z_training_data_32_shark.csv',
-                       '/Users/Pharrell_WANG/PycharmProjects/vcmd_data_prepare/1_raw_data_32x32/z_training_data_32_undo_dancer.csv'
-                        ]
-list_of_output_files = [
-                        # '/Users/Pharrell_WANG/PycharmProjects/vcmd_data_prepare/2_no_comma_32x32/no_comma_all_data_32_balloon.csv',
-                        # '/Users/Pharrell_WANG/PycharmProjects/vcmd_data_prepare/2_no_comma_32x32/no_comma_all_data_32_gt_fly.csv',
-                        # '/Users/Pharrell_WANG/PycharmProjects/vcmd_data_prepare/2_no_comma_32x32/no_comma_all_data_32_kendo.csv',
-                        # '/Users/Pharrell_WANG/PycharmProjects/vcmd_data_prepare/2_no_comma_32x32/no_comma_all_data_32_newspaper.csv',
-                        # '/Users/Pharrell_WANG/PycharmProjects/vcmd_data_prepare/2_no_comma_32x32/no_comma_all_data_32_poznan_hall2.csv',
-                        # '/Users/Pharrell_WANG/PycharmProjects/vcmd_data_prepare/2_no_comma_32x32/no_comma_all_data_32_poznan_street.csv',
-                        # '/Users/Pharrell_WANG/PycharmProjects/vcmd_data_prepare/2_no_comma_32x32/no_comma_all_data_32_shark.csv',
-                        '/Users/Pharrell_WANG/PycharmProjects/vcmd_data_prepare/2_no_comma_32x32/no_comma_all_data_32_undo_dancer.csv'
-                        ]
+list_of_input_files = ['/Users/Pharrell_WANG/PycharmProjects/fdc-tf-data-preprocessing/data_after_step1_concat/merged_from_three_sequences_size_16.csv']
+list_of_output_files = ['/Users/Pharrell_WANG/PycharmProjects/fdc-tf-data-preprocessing/data_after_step2_remove/comma_removed_size_16.csv']
 
 for x in range(len(list_of_input_files)):
     comma_remover(list_of_input_files[x], list_of_output_files[x])
