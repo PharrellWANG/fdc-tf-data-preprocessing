@@ -1,11 +1,9 @@
 import pandas
 import tensorflow as tf
 
-# FILE_TO_BE_CONVERTED = "/Users/Pharrell_WANG/PycharmProjects/fdc-tf-data-preprocessing/train_data/training_data_16x16.csv"
-FILE_TO_BE_CONVERTED = "/Users/Pharrell_WANG/PycharmProjects/fdc-tf-data-preprocessing/validate_data/validating_data_16x16.csv"
+FILE_TO_BE_CONVERTED = "/Users/Pharrell_WANG/PycharmProjects/fdc-tf-data-preprocessing/test_data/testing_data_16x16.csv"
 
-# TFRecord_OUTPUT = "/Users/Pharrell_WANG/PycharmProjects/fdc-tf-data-preprocessing/TFRecords/16x16/16x16_train.tfrecord"
-TFRecord_OUTPUT = "/Users/Pharrell_WANG/PycharmProjects/fdc-tf-data-preprocessing/TFRecords/16x16/16x16_validation.tfrecord"
+TFRecord_OUTPUT = "/Users/Pharrell_WANG/PycharmProjects/fdc-tf-data-preprocessing/TFRecords/16x16/16x16_test.tfrecord"
 
 csv = pandas.read_csv(FILE_TO_BE_CONVERTED).values
 with tf.python_io.TFRecordWriter(TFRecord_OUTPUT) as writer:
