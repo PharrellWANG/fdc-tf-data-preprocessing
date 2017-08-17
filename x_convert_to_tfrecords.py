@@ -7,9 +7,14 @@ TFRecord_OUTPUT = "/Users/Pharrell_WANG/PycharmProjects/fdc-tf-data-preprocessin
 
 csv = pandas.read_csv(FILE_TO_BE_CONVERTED).values
 with tf.python_io.TFRecordWriter(TFRecord_OUTPUT) as writer:
+    counter = 0
     for row in csv:
+        counter += 1
         features, label = row[:-1], row[-1]
         example = tf.train.Example()
-        example.features.feature["features"].float_list.value.extend(features)
-        example.features.feature["label"].int64_list.value.append(label)
+        example.features.feature["pixel_values_of_the_block"].float_list.value.extend(features)
+        example.features.feature["intra_mode_label"].int64_list.value.append(label)
+        if counter == 1:
+            print(example)
+            print(type(example))
         writer.write(example.SerializeToString())
